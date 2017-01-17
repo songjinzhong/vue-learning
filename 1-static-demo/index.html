@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>VUE demo!</title>
+</head>
+<body>
+  <div id="app">
+    <!-- 基本用法 -->
+    <p>{{ message }}</p>
+    <p>{{ date }}</p>
+    <!-- v- 元素绑定 -->
+    <h2>v-bind</h2>
+    <p v-bind:title="title">
+      note my title.
+    </p>
+    <!-- 条件语句 -->
+    <h2>If</h2>
+    <p v-if="seen">
+      if you can seen me!
+    </p>
+    <!-- 循环语句 -->
+    <h2>Loop</h2>
+    <ol>
+      <li v-for="item in items">
+        {{ item.name }}
+      </li>
+    </ol>
+    <!-- 事件 -->
+    <h2>click</h2>
+    <input v-model="num1"> + <input v-model="num2"> = {{ sum }}
+    <p><button v-on:click="add">Add</button></p>
+  </div>
+  <script src="https://unpkg.com/vue/dist/vue.js"></script>
+  <script type="text/javascript" src="main.js"></script>
+</body>
+</html>
