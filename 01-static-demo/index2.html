@@ -9,8 +9,21 @@
   </div>
   <div id="app2">
     <ul>
-      <vue-item v-for="item in fruits" v-bind:item="item"></vue-item>
+      <vue-item v-for="item in fruits" v-bind:list="item"></vue-item>
     </ul>
+    <!-- 计算缓存 -->
+    <h2>计算缓存</h2>
+    <p>Message: {{message}}</p>
+    <p>ReverseMessage: {{ reverseMessage }}</p>
+    <p>Methods => {{ rMessage() }}</p>
+    <h2>时间</h2>
+    <p>Time(computed) => {{ showTime }}</p>
+    <p>Time(methods) => {{ timer() }}</p>
+    <p>fullName => {{ fullName }}</p>
+    <!-- set & get 方法 -->
+    <h2>Set Get 方法</h2>
+    <p><input type="text" v-model="inputValue"></p>
+    <p><button v-on:click="setName">Change Name</button></p>
   </div>
   <script src="https://unpkg.com/vue/dist/vue.js"></script>
   <script type="text/javascript" src="main2.js"></script>
