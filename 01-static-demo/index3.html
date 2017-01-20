@@ -24,6 +24,16 @@
     <p>内敛样式</p>
     <p v-bind:style="{ fontSize:fontSize + 'px' }">you can set my font-size.</p>
     <p><input type="text" v-model="inputValue"><button  v-on:click="setSize">Set Font-Size</button></p>
+    <!-- if else -->
+    <h2>条件渲染</h2>
+    <template v-if="ok"><p>Hello</p><p>ok is true!</p></template>
+    <p v-else>ok is false!</p>
+    <p><button v-on:click="changeOk">Change</button></p>
+    <!-- Login -->
+    <h2>登陆</h2>
+    <p>username：<input type="text" v-model="username"></p>
+    <p v-if="username == 'root'">you got it!</p>
+    <p v-else>Try [root] </p>
   </div>
   <script src="https://unpkg.com/vue/dist/vue.js"></script>
   <script type="text/javascript" src="main3.js"></script>
