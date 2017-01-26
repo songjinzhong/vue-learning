@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>vue demo 4</title>
+</head>
+<body>
+  <div>
+    back to <a href="index3.html">page3</a>
+  </div>
+  <div id="demo">
+    <!-- 动态渲染 -->
+    <h2>动态渲染</h2>
+    <p>{{ message }}</p>
+    <!-- 过渡 -->
+    <h2>过渡</h2>
+    <button @click="show = !show">
+        Toggle
+    </button>
+    <transition
+      v-on:before-enter="beforeEnter"
+      v-on:enter="enter"
+      v-on:leave="leave"
+      v-bind:css="false">
+      <p v-if="show">Demo</p>
+    </transition>
+    <!-- on foo -->
+    <h2>on off</h2>
+    <transition name="fade" mode="in-out"
+      v-on:enter="benter"
+      v-on:leave="bleave">
+      <button v-bind:key="button" @click="button = !button" style="display: inline-block;">
+        {{ button ? 'on':'off' }}
+      </button>
+    </transition>
+    <!-- 列表过渡 -->
+    <h2>列表过渡</h2>
+    <button v-on:click="add">Add</button>
+    <button v-on:click="remove">Remove</button>
+    <transition-group name="list" tag="p"
+      v-on:before-enter="lbeforeenter"
+      v-on:enter="lenter"
+      v-on:leave="lleave">
+      <span v-for="item in items" v-bind:key="item" class="list-item">
+        {{ item }}
+      </span>
+    </transition-group>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.3/velocity.min.js"></script>
+  <script src="https://unpkg.com/vue/dist/vue.js"></script>
+  <script type="text/javascript" src="main4.js"></script>
+</body>
+</html>
