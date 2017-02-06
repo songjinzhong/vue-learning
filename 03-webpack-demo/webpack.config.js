@@ -33,7 +33,7 @@ module.exports = {
     path: BUILD_PATH,
     filename: '[name].js',
     // 指向异步加载的路径
-    publicPath : __dirname + '/build/',
+    publicPath : 'build/',
     // 非主文件的命名规则
     chunkFilename: '[id].build.js?[chunkhash]'
   },

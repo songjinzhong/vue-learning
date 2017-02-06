@@ -88,7 +88,7 @@
 /******/ 	__webpack_require__.c = installedModules;
 
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "/Users/songjinzhong/files/myGitFiles/vue-learning/03-webpack-demo/build/";
+/******/ 	__webpack_require__.p = "build/";
 /******/ })
 /************************************************************************/
 /******/ ([]);
